@@ -1,0 +1,5 @@
+autoload
+plugged
+session
+init.vim
+.netrwhist
