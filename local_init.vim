@@ -20,6 +20,7 @@ command! JsonUglify :%!jq --compact-output '.'
 command! MakeItFast :!xset r rate 200 40
 command! PgFormat :%!pg_format -B -g -L -b -e -
 command! PhpactorRemoveUnusedClasses :!php-cs-fixer fix '%' --rules=no_unused_imports
+command! RebaseCurrentBranch :!git rebase -i HEAD~$(git rev-list --count HEAD ^develop)
 command! RelatorioGerar :!docker-compose exec --user www-data -T php php bin/console relatorio:gerar
 command! Reload :so ~/.config/nvim/init.vim
 command! ReviseCode :Git diff develop HEAD
@@ -53,5 +54,9 @@ augroup end
 
 " Não sei o que isso faz, mas ele deixa o vim mais bonito
 set termguicolors
-set cul
+" set cul
 set guicursor=i-ci-ve:ver25,n-v-c-sm:ver25
+
+" Dictionary
+set dictionary+=/usr/share/dict/brazilian
+set dictionary+=/usr/share/dict/american-english
