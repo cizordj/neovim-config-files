@@ -65,5 +65,7 @@ set termguicolors
 set guicursor=i-ci-ve:ver25,n-v-c-sm:ver25
 
 " Dictionary
-set dictionary+=/usr/share/dict/brazilian
-set dictionary+=/usr/share/dict/american-english
+if !exists('dictionary')
+    set dictionary+=/usr/share/dict/brazilian
+    set dictionary+=/usr/share/dict/american-english
+endif
