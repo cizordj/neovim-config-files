@@ -20,3 +20,7 @@ Plug 'morhetz/gruvbox'
 
 " LSP Config
 Plug 'neovim/nvim-lspconfig'
+
+" Window animation stuff
+Plug 'camspiers/animate.vim'
+Plug 'camspiers/lens.vim'
