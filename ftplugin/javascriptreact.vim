@@ -11,5 +11,8 @@ nmap <Leader>pp :Prettier<CR>
 set omnifunc=ale#completion#OmniFunc
 let g:ale_completion_autoimport = 1
 let g:airline#extensions#ale#enabled = 1
+lua << EOF
+require'lspconfig'.tsserver.setup{}
+EOF
 
 let b:loaded_myplugin = 1

@@ -20,14 +20,12 @@ command! JsonUglify :%!jq --compact-output '.'
 command! MakeItFast :!xset r rate 200 40
 command! PgFormat :%!pg_format -B -g -L -b -e -
 command! PhpactorRemoveUnusedClasses :!php-cs-fixer fix '%' --rules=no_unused_imports
-command! RebaseCurrentBranch :!git rebase -i HEAD~$(git rev-list --count HEAD ^develop)
+command! RebaseCurrentBranch :call RebaseCurrentBranch()
 command! RelatorioGerar :!docker-compose exec --user www-data -T php php bin/console relatorio:gerar
 command! Reload :so ~/.config/nvim/init.vim
 command! ReviseCode :Git diff develop HEAD
 let g:neovide_cursor_vfx_mode = "railgun"
 
-set background=dark
-colorscheme iceberg
 let g:airline_theme='jellybeans'
 
 let we_are_on_git_flow=system('git rev-parse --abbrev-ref HEAD | grep feature | wc -l')
@@ -36,6 +34,15 @@ if we_are_on_git_flow
     autocmd VimEnter * execute 'SessionOpen' current_branch
     autocmd VimEnter * execute 'filetype detect'
 endif
+
+function RebaseCurrentBranch()
+    let we_are_on_git_flow=system('git rev-parse --abbrev-ref HEAD | grep feature | wc -l')
+    if we_are_on_git_flow > 1
+        finish
+    endif
+    let number_of_commits = system("git rev-list --count HEAD ^develop | tr -d '\n'")
+    execute 'Git rebase -i HEAD~' . number_of_commits
+endfunction
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#ignore_bufadd_pat = 'defx|gundo|nerd_tree|startify|tagbar|undotree|vimfiler'
