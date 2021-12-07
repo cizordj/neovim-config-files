@@ -69,3 +69,4 @@ if !exists('dictionary')
     set dictionary+=/usr/share/dict/brazilian
     set dictionary+=/usr/share/dict/american-english
 endif
+set inccommand=nosplit
