@@ -1,6 +1,4 @@
-if exists('b:loaded_myplugin')
-  finish
-endif
+if exists('b:loaded_myplugin') | finish | endif
 
 call ncm2#enable_for_buffer()
 set shiftwidth=4 tabstop=4
@@ -33,6 +31,5 @@ vmap <silent><Leader>em :<C-U>call phpactor#ExtractMethod()<CR>
 lua << EOF
 require'lspconfig'.phpactor.setup{}
 EOF
-" let v:lua.vim.lsp.omnifunc
-set omnifunc=v:lua.vim.lsp.omnifunc
+setlocal omnifunc=v:lua.vim.lsp.omnifunc
 let b:loaded_myplugin = 1
