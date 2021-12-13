@@ -22,3 +22,6 @@ Plug 'morhetz/gruvbox'
 Plug 'neovim/nvim-lspconfig'
 
 Plug 'chrisbra/csv.vim'
+
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
