@@ -62,7 +62,7 @@ augroup end
 " Não sei o que isso faz, mas ele deixa o vim mais bonito
 set termguicolors
 " set cul
-set guicursor=i-ci-ve:ver25,n-v-c-sm:ver25
+" set guicursor=i-ci-ve:ver25,n-v-c-sm:ver25
 
 " Dictionary
 if !exists('dictionary')
@@ -70,3 +70,6 @@ if !exists('dictionary')
     set dictionary+=/usr/share/dict/american-english
 endif
 set inccommand=nosplit
+colorscheme ayu
+let ayucolor="mirage"
+let g:airline_theme= 'ayu_mirage'

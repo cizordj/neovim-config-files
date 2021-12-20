@@ -23,5 +23,6 @@ Plug 'neovim/nvim-lspconfig'
 
 Plug 'chrisbra/csv.vim'
 
-Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
+" Themes
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
+Plug 'ayu-theme/ayu-vim'
