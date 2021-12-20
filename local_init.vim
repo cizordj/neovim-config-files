@@ -24,9 +24,6 @@ command! RebaseCurrentBranch :call RebaseCurrentBranch()
 command! RelatorioGerar :!docker-compose exec --user www-data -T php php bin/console relatorio:gerar
 command! Reload :so ~/.config/nvim/init.vim
 command! ReviseCode :Git diff develop HEAD
-let g:neovide_cursor_vfx_mode = "railgun"
-
-let g:airline_theme='jellybeans'
 
 let we_are_on_git_flow=system('git rev-parse --abbrev-ref HEAD | grep feature | wc -l')
 if we_are_on_git_flow
