@@ -28,3 +28,5 @@ Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'ayu-theme/ayu-vim'
 
 Plug 'ryanoasis/vim-devicons'
+" Beatiful screenshots
+Plug 'kristijanhusak/vim-carbon-now-sh'
