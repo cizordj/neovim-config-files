@@ -16,7 +16,7 @@ The above dependencies are necessary for the basic funcionality, if you are a PH
 (like me) you may want to install more packages that are specific to this language.
 
 ```sh
-apt install php8.1-cli php8.1-xml php8.1-curl php8.1-mbstring php8.1-intl composer
+apt install php8.1-cli php8.1-xml php8.1-curl php8.1-mbstring php8.1-intl composer phpmd
 ```
 
 To enjoy the full experience when developing in PHP you can install the php-cs-fixer and
