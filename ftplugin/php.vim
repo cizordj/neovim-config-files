@@ -32,4 +32,5 @@ lua << EOF
 require'lspconfig'.phpactor.setup{}
 EOF
 setlocal omnifunc=v:lua.vim.lsp.omnifunc
+let b:ale_fixers = ['php_cs_fixer']
 let b:loaded_myplugin = 1
