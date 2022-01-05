@@ -33,4 +33,5 @@ require'lspconfig'.phpactor.setup{}
 EOF
 setlocal omnifunc=v:lua.vim.lsp.omnifunc
 let b:ale_fixers = ['php_cs_fixer']
+let b:ale_php_phpmd_ruleset = 'cleancode,controversial,design,naming,unusedcode'
 let b:loaded_myplugin = 1
