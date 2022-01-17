@@ -25,7 +25,6 @@ Plug 'chrisbra/csv.vim'
 
 " Themes
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
-Plug 'ayu-theme/ayu-vim'
 
 Plug 'ryanoasis/vim-devicons'
 " Beatiful screenshots
