@@ -2,9 +2,6 @@ au User Ncm2PopupOpen set completeopt=noinsert,menuone,noselect
 au User Ncm2PopupClose set completeopt=menuone
 
 let g:smoothie_enabled = 1
-let g:smoothie_experimental_mappings = 1
-silent! map <unique> gg         <Plug>(Smoothie_gg)
-silent! map <unique> G          <Plug>(Smoothie_G)
 command! ClearCache :!docker-compose exec --user www-data -T php php bin/console cache:clear
 command! DeleteFile :call delete(expand('%')) | bdelete!
 command! EditConfigInitVim :e ~/.config/nvim/init.vim
