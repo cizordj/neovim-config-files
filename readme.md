@@ -9,7 +9,7 @@ On Debian-based systems you can install the recommended packages to enjoy
 all of the features of this repo.
 
 ```sh
-apt install git exuberant-ctags ncurses-term curl silversearcher-ag python3-pynvim jq pgformatter
+apt install git exuberant-ctags ncurses-term curl silversearcher-ag python3-pynvim jq pgformatter fzf
 ```
 
 The above dependencies are necessary for the basic funcionality, if you are a PHP developer
