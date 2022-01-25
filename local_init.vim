@@ -1,3 +1,5 @@
+set nowrap
+set mouse=
 au User Ncm2PopupOpen set completeopt=noinsert,menuone,noselect
 au User Ncm2PopupClose set completeopt=menuone
 
@@ -11,7 +13,7 @@ command! ElasticaPopulate :!docker-compose exec --user www-data -T php php bin/c
 command! FixPermissions :!docker-compose exec -T php chown www-data:www-data -R var/
 command! GAmmend :Git commit --amend --verbose
 command! GenerateRoutes :!docker-compose exec --user www-data -T php php bin/console fos:js-routing:dump --format=json --target=public/js/fos_js_routes.json
-command! GimmePermission :!doas chown $USER:$USER '%'
+command! GimmePermission :call GimmePermission()
 command! JsonPrettify :%!jq '.'
 command! JsonUglify :%!jq --compact-output '.'
 command! MakeItFast :!xset r rate 200 40
@@ -37,6 +39,12 @@ function RebaseCurrentBranch()
     endif
     let number_of_commits = system("git rev-list --count HEAD ^develop | tr -d '\n'")
     execute 'Git rebase -i HEAD~' . number_of_commits
+endfunction
+
+function GimmePermission()
+    set noswapfile
+    :!doas chown $USER:$USER '%'
+    :!doas chmod +rw '%'
 endfunction
 
 let g:airline_powerline_fonts = 1
