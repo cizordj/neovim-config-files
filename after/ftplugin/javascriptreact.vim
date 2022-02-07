@@ -17,4 +17,5 @@ require'lspconfig'.tsserver.setup{}
 EOF
 endif
 
+UltiSnipsAddFiletypes javascript.javascriptreact.html
 let b:loaded_myplugin = 1
