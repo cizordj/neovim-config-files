@@ -2,6 +2,7 @@ if exists('b:loaded_myplugin')
   finish
 endif
 
+set tabstop=2 shiftwidth=2 softtabstop=2 expandtab nosmarttab
 call ncm2#enable_for_buffer()
 let b:ale_fixers = ['prettier', 'eslint']
 let b:ale_completion_enabled = 1
@@ -17,5 +18,4 @@ require'lspconfig'.tsserver.setup{}
 EOF
 endif
 
-UltiSnipsAddFiletypes javascript.javascriptreact.html
 let b:loaded_myplugin = 1

@@ -23,7 +23,6 @@ command! RebaseCurrentBranch :call RebaseCurrentBranch()
 command! RelatorioGerar :!docker-compose exec --user www-data -T php php bin/console relatorio:gerar
 command! Reload :so ~/.config/nvim/init.vim
 command! ReviseCode :Git diff develop HEAD
-command! Screenshot :CarbonNowSh
 
 let we_are_on_git_flow=system('git rev-parse --abbrev-ref HEAD | grep feature | wc -l')
 if we_are_on_git_flow
@@ -63,8 +62,8 @@ augroup apigca
 augroup end
 
 " Não sei o que isso faz, mas ele deixa o vim mais bonito
-" set termguicolors
-" set cul
+set termguicolors
+set cul
 " set guicursor=i-ci-ve:ver25,n-v-c-sm:ver25
 
 " Dictionary
