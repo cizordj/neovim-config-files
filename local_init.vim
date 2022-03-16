@@ -49,18 +49,12 @@ endfunction
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#ignore_bufadd_pat = 'defx|gundo|nerd_tree|startify|tagbar|undotree|vimfiler'
 set exrc
-set secure
+" set secure
 
 " Dbext plugin
 let g:dbext_default_profile = 'brd2'
 let g:dbext_default_profile_apigca = $DBEXT_DEFAULT_PROFILE_APIGCA
 let g:dbext_default_profile_brd2 = $DBEXT_DEFAULT_PROFILE_BRD2
-augroup apigca
-    au!
-    " Automatically choose the correct dbext profile
-    autocmd BufRead /home/cezar-campos/Desktop/APIGoogleConsoleAdmin/* DBSetOption profile=apigca
-augroup end
-
 " Não sei o que isso faz, mas ele deixa o vim mais bonito
 set termguicolors
 set cul
