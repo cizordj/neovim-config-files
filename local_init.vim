@@ -10,7 +10,7 @@ command! EditConfigInitVim :e ~/.config/nvim/init.vim
 command! EditConfigLocalBundles :e ~/.config/nvim/local_bundles.vim
 command! EditConfigLocalVim :e ~/.config/nvim/local_init.vim
 command! ElasticaPopulate :!docker-compose exec --user www-data -T php php bin/console fos:elastica:populate
-command! FixPermissions :!docker-compose exec -T php chown www-data:www-data -R var/ vendor/ composer.lock composer.json symfony.lock
+command! FixPermissions :!docker-compose exec -T php chown www-data:www-data -R var/ vendor/ public/ composer.lock composer.json symfony.lock package.json
 command! GAmmend :Git commit --amend --verbose
 command! GenerateRoutes :!docker-compose exec --user www-data -T php php bin/console fos:js-routing:dump --format=json --target=public/js/fos_js_routes.json
 command! GimmePermission :call GimmePermission()
